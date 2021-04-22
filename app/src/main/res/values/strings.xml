@@ -12,4 +12,5 @@
     <string name="popular_recipes">Popular Recipes</string>
     <string name="register">SIgn Up</string>
     <string name="text_account">Don\'t Have an Account</string>
+    <string name="not_empty">Not empty</string>
 </resources>

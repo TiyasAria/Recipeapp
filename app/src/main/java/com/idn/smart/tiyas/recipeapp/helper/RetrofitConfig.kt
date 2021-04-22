@@ -28,5 +28,6 @@ object RetrofitConfig {
         .build()
 
     // make a func
+    fun  getInstance() : ApiService = retrofit.create(ApiService::class.java)
 
 }

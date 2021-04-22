@@ -4,11 +4,12 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.google.firebase.auth.FirebaseAuth
 import com.idn.smart.tiyas.recipeapp.R
 import com.idn.smart.tiyas.recipeapp.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var mainActivityMainBinding: ActivityMainBinding
     companion object{
@@ -22,11 +23,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(mainActivityMainBinding.root)
         supportActionBar?.hide()
 
+        mainActivityMainBinding.btnLogOut.setOnClickListener(this)
+
 
     }
 
     private fun signOUt(){
         startActivity(Intent(SignInActivity.getLaunchService(this)))
         FirebaseAuth.getInstance().signOut()
+    }
+
+    override fun onClick(v: View) {
+        when(v.id){
+            R.id.btn_log_out -> signOUt()
+        }
+
     }
 }
