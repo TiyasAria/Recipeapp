@@ -8,7 +8,7 @@ import android.os.Parcelable
 
 @SuppressLint("ParcelCreator")
 @Parcelize
-data class FoodRecipes(
+data class DetailRecipes(
     @SerializedName("meals")
-    val meals: List<Meal>?
+    val meals: List<MealX>?
 ) : Parcelable

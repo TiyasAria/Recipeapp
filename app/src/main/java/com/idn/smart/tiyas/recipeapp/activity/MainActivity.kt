@@ -25,7 +25,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         mainActivityMainBinding.btnLogOut.setOnClickListener(this)
 
+        getRecipeAsian()
+    }
 
+    private fun getRecipeAsian() {
+        TODO("Not yet implemented")
     }
 
     private fun signOUt(){

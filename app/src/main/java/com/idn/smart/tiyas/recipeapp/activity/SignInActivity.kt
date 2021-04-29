@@ -32,13 +32,16 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
         signInBinding.tvForgetPwd.setOnClickListener(this)
         signInBinding.btnSignIn.setOnClickListener(this)
         signInBinding.tvSignUp.setOnClickListener(this)
+        signInBinding.tvForgetPwd.setOnClickListener(this)
 
     }
+    
 
     override fun onClick(v: View) {
         when(v.id){
             R.id.btn_sign_in -> signIn()
             R.id.tv_sign_up -> startActivity(Intent(SignUpActivity.getLaunchService(this)))
+            R.id.tv_forget_pwd -> startActivity(Intent(ForgetPasswordActivity.getLaunchService(this)))
         }
     }
 
